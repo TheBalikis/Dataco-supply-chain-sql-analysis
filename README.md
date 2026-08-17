@@ -4,18 +4,18 @@ A SQL Server portfolio project that transforms a single flat operational dataset
 ---
 
 ## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Business Problem](#business-problem)
-3. [Objectives](#objectives)
-4. [Dataset](#dataset)
-5. [Database Design](#database-design)
-6. [Data Preparation & Validation](#data-preparation--validation)
-7. [SQL Analysis](#sql-analysis)
-8. [Key Findings](#key-findings)
-9. [Business Insights](#business-insights)
-10. [Conclusion](#conclusion)
-11. [Recommendations](#recommendations)
-12. [Tools Used](#tools-used)
+- [Project Overview](#project-overview)
+- [Business Problem](#business-problem)
+- [Objectives](#objectives)
+- [Dataset](#dataset)
+- [Database Design](#database-design)
+- [Data Preparation & Validation](#data-preparation--validation)
+- [SQL Analysis](#sql-analysis)
+- [Key Findings](#key-findings)
+- [Business Insights](#business-insights)
+- [Conclusion](#conclusion)
+- [Recommendations](#recommendations)
+- [Tools Used](#tools-used)
 
 
 --
@@ -34,6 +34,7 @@ The analysis also includes advanced SQL techniques such as **Common Table Expres
 
 The purpose of the project was not simply to demonstrate SQL syntax. The focus was on using SQL to turn a large supply chain dataset into structured information that can be interpreted in a business context and used to identify areas requiring further attention.
 
+
 --
 
 ## Business Problem
@@ -47,6 +48,7 @@ The analysis therefore focused on turning the raw transactional data into a stru
 A further consideration was the reliability of the analysis. Customer names, for example, were not sufficient to identify individual customers because the dataset contained multiple records with the same name. CustomerID was therefore used as the customer-level identifier when analysing individual customer spending.
 
 The overall business problem was to move from a large and difficult-to-analyse raw dataset to reliable, business-focused information that could help identify performance patterns, operational issues and areas requiring further investigation.
+
 
 --
 
@@ -69,6 +71,7 @@ The main objectives of the project were to:
 7. **Apply advanced SQL techniques** including CTEs, window functions, ranking, subqueries and date functions to answer more detailed business questions.
 
 8. **Translate the SQL results into business insights and recommendations** that distinguish between what the data directly shows and areas that require further investigation.
+
 
 --
 
@@ -103,6 +106,7 @@ For the project, the raw dataset was reorganised into a relational database cont
 
 The dataset was used as the foundation for both the database design and the subsequent SQL analysis. The original raw structure was retained for reference, while the seven-table relational structure was used for the business analysis.
 
+
 --
 
 ## Database Design
@@ -129,6 +133,7 @@ The final database structure is represented in the ERD below, showing the tables
 
 ![DataCo Supply Chain Database ERD](Images/DataCo_ERD.png)
 
+
 --
 
 ## Data Preparation & Validation
@@ -154,6 +159,7 @@ Validation was carried out before the business analysis to ensure that the datab
 These checks also helped identify and resolve issues encountered during the database creation and loading process, including duplicate records, null values in required fields and incorrect or repeated insert operations.
 
 The final validated database contained **seven related tables**, which were then used for the business and advanced SQL analysis.
+
 
 --
 
@@ -204,6 +210,7 @@ The project applied a range of SQL techniques, including:
 
 The complete SQL scripts are included in the repository so that the analysis can be reviewed and reproduced.
 
+
 --
 
 ## Key Findings
@@ -232,6 +239,7 @@ The analysis identified several patterns across customer spending, revenue perfo
 * The cumulative revenue analysis provided a clearer view of long-term growth, while month-to-month analysis highlighted changes that could be hidden by the cumulative total.
 
 Overall, the findings show that the dataset contains meaningful differences across customers, products, profitability and delivery performance, while also highlighting areas where further analysis would be required before making causal conclusions.
+
 
 --
 
@@ -279,6 +287,7 @@ The analysis identifies strong revenue-generating areas alongside opportunities 
 
 The most important areas for further attention are **customer retention and value development, product profitability, revenue concentration and delivery performance**, particularly the unusually high late-delivery rate associated with First Class shipments.
 
+
 --
 
 ## Conclusion
@@ -292,6 +301,7 @@ One of the most significant operational findings was the **95.27% late-delivery 
 The customer analysis also showed that revenue among the highest-spending customers was relatively evenly distributed, while **43.5% of purchasing customers spent above the average customer spend of $1,600.54**. These findings suggest that customer value extends across a broad portion of the customer base rather than being limited to a small group of standout accounts. However, a more detailed customer concentration analysis would be required to determine the proportion of total company revenue generated by the highest-value customers.
 
 Overall, the project demonstrates how SQL can be used to move from a large and unstructured dataset to a relational database and then translate that data into business-focused analysis. The results provide a foundation for further investigation into customer concentration, profitability drivers and delivery performance, while ensuring that business decisions are based on evidence rather than assumptions.
+
 
 --
 
@@ -320,6 +330,7 @@ Management should compare order volume, product mix, customer demand and purchas
 The analysis showed overall cumulative revenue growth alongside month-to-month fluctuations. Monitoring cumulative revenue alone could therefore hide periods of weaker performance.
 
 A regular monthly performance review should track revenue, month-on-month growth and significant changes against previous periods. Where a material decline occurs, management can investigate the underlying product, regional or customer-level drivers and respond accordingly.
+
 
 --
 
