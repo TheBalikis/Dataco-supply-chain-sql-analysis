@@ -13,12 +13,12 @@ A SQL Server portfolio project that transforms a single flat operational dataset
 7. [SQL Analysis](#sql-analysis)
 8. [Key Findings](#key-findings)
 9. [Business Insights](#business-insights)
-10. [Recommendations](#recommendations)
-11. [Tools Used](#tools-used)
-12. [Repository Structure](#repository-structure)
-13. [Documentation](#documentation)
-14. [Conclusion](#conclusion)
+10. [Conclusion](#conclusion)
+11. [Recommendations](#recommendations)
+12. [Tools Used](#tools-used)
 
+
+--
 
 ## Project Overview
 
@@ -34,6 +34,7 @@ The analysis also includes advanced SQL techniques such as **Common Table Expres
 
 The purpose of the project was not simply to demonstrate SQL syntax. The focus was on using SQL to turn a large supply chain dataset into structured information that can be interpreted in a business context and used to identify areas requiring further attention.
 
+--
 
 ## Business Problem
 
@@ -47,6 +48,7 @@ A further consideration was the reliability of the analysis. Customer names, for
 
 The overall business problem was to move from a large and difficult-to-analyse raw dataset to reliable, business-focused information that could help identify performance patterns, operational issues and areas requiring further investigation.
 
+--
 
 ## Objectives
 
@@ -68,6 +70,7 @@ The main objectives of the project were to:
 
 8. **Translate the SQL results into business insights and recommendations** that distinguish between what the data directly shows and areas that require further investigation.
 
+--
 
 ## Dataset
 
@@ -100,6 +103,7 @@ For the project, the raw dataset was reorganised into a relational database cont
 
 The dataset was used as the foundation for both the database design and the subsequent SQL analysis. The original raw structure was retained for reference, while the seven-table relational structure was used for the business analysis.
 
+--
 
 ## Database Design
 
@@ -125,6 +129,7 @@ The final database structure is represented in the ERD below, showing the tables
 
 ![DataCo Supply Chain Database ERD](Images/DataCo_ERD.png)
 
+--
 
 ## Data Preparation & Validation
 
@@ -150,6 +155,7 @@ These checks also helped identify and resolve issues encountered during the data
 
 The final validated database contained **seven related tables**, which were then used for the business and advanced SQL analysis.
 
+--
 
 ## SQL Analysis
 
@@ -197,3 +203,131 @@ The project applied a range of SQL techniques, including:
 * Currency formatting using `FORMAT()`
 
 The complete SQL scripts are included in the repository so that the analysis can be reviewed and reproduced.
+
+--
+
+## Key Findings
+
+The analysis identified several patterns across customer spending, revenue performance, profitability and delivery operations.
+
+### Customer Performance
+
+* **Mary Smith (CustomerID 791)** ranked first among the top 10 customers by revenue, generating **$9,436.61**.
+* Revenue across the top 10 customers was relatively evenly distributed, ranging from **$9,436.61 to $7,869.02**, with no major gap between the highest-ranking customers.
+* **8,983 of 20,652 purchasing customers (43.5%)** spent above the average customer spend of **$1,600.54**.
+
+### Revenue and Profitability
+
+* Revenue and profitability varied across departments, categories and products, highlighting differences between sales performance and actual profit contribution.
+* The analysis showed the importance of considering **profit and profit margin alongside revenue** when evaluating product and category performance.
+
+### Shipping and Delivery
+
+* **First Class recorded a 95.27% late-delivery rate**, making it a notable area for further operational investigation.
+* Delivery performance varied across shipping-related segments, indicating that shipping outcomes should be assessed alongside other factors such as destination and scheduled delivery requirements rather than by shipping mode alone.
+
+### Revenue Trends
+
+* Monthly revenue was analysed alongside cumulative revenue to show how overall revenue developed throughout the period.
+* The cumulative revenue analysis provided a clearer view of long-term growth, while month-to-month analysis highlighted changes that could be hidden by the cumulative total.
+
+Overall, the findings show that the dataset contains meaningful differences across customers, products, profitability and delivery performance, while also highlighting areas where further analysis would be required before making causal conclusions.
+
+--
+
+## Business Insights
+
+The analysis identified several findings relevant to revenue performance, customer value, profitability and operational efficiency. Rather than simply reporting the results, the findings were considered in terms of what they could mean for business decision-making.
+
+### 1. Revenue Concentration
+
+Revenue performance was not evenly distributed across departments, regions and customers. **Fan Shop** generated the highest departmental revenue, while **Western Europe** was the strongest region by revenue.
+
+This indicates that some areas of the business contribute more substantially to overall sales than others. Understanding the factors behind this performance could help management identify practices, products or market conditions that may be relevant to weaker-performing areas.
+
+However, the results show differences in revenue contribution rather than proving that revenue is highly concentrated. A more detailed concentration analysis would be required to determine how much of total company revenue is generated by the highest-performing entities.
+
+### 2. Customer Dependency and Retention Strategy
+
+The top-spending customers showed a relatively balanced revenue contribution, with no single customer standing significantly above the others. This suggests that, within the top 10 customers, the business is not heavily dependent on one high-value customer.
+
+The wider customer analysis also found that **8,983 of 20,652 purchasing customers (43.5%)** spent above the average customer spend of **$1,600.54**. This indicates that above-average spending is not limited to a small group of customers.
+
+From a management perspective, this supports a broader customer retention and value-building approach rather than focusing exclusively on a small VIP segment. However, the top-10 analysis alone is not enough to establish overall customer concentration. Comparing the combined revenue of the top 1%, 5% or 10% of customers with total company revenue would provide a stronger measure of customer dependency and potential revenue risk.
+
+### 3. Profitability Does Not Always Follow Revenue
+
+The profitability analysis showed that **Fishing** generated the highest profit among the categories analysed.
+
+This highlights why revenue should not be used as the only measure of business performance. A product or category can generate substantial sales without necessarily producing the highest profit. Management should therefore consider revenue alongside **profit, profit margin and average order value** when evaluating product and category performance.
+
+### 4. First Class Delivery Performance Requires Attention
+
+**First Class recorded a 95.27% late-delivery rate**, making it the most significant delivery-performance concern identified in the analysis.
+
+The result does not by itself explain why deliveries were late or establish that shipping mode was the cause. However, it provides a clear area for further investigation. Management could examine factors such as shipping schedules, destinations, order volumes and fulfilment processes to determine what may be contributing to the high rate.
+
+### 5. Revenue Growth Was Positive but Not Consistent
+
+Cumulative revenue increased over the period analysed, indicating overall growth across the dataset. However, the monthly analysis showed that revenue could increase or decrease from one month to the next.
+
+Overall growth should therefore not be interpreted as consistent month-to-month performance. Monitoring monthly changes alongside cumulative revenue would help management identify periods of weaker performance and investigate the factors behind those changes.
+
+### Overall Business Insight
+
+The analysis identifies strong revenue-generating areas alongside opportunities to improve operational performance and better understand the factors influencing profitability and customer value.
+
+The most important areas for further attention are **customer retention and value development, product profitability, revenue concentration and delivery performance**, particularly the unusually high late-delivery rate associated with First Class shipments.
+
+--
+
+## Conclusion
+
+This project analysed the DataCo Supply Chain dataset using SQL Server, beginning with the preparation and restructuring of the raw dataset into a relational database and progressing through data validation, business analysis and advanced SQL analysis.
+
+The analysis identified differences in revenue performance across customers, departments and regions, alongside important findings relating to profitability and delivery performance. The advanced SQL analysis provided further insight into customer revenue rankings, cumulative revenue growth, above-average customer spending and month-to-month revenue movement.
+
+One of the most significant operational findings was the **95.27% late-delivery rate recorded for First Class shipments**. While this is a notable finding, the analysis is descriptive and does not establish that shipping mode itself causes delivery delays. Further statistical analysis would be required to determine which factors are associated with late delivery and whether the observed differences remain significant after accounting for other variables.
+
+The customer analysis also showed that revenue among the highest-spending customers was relatively evenly distributed, while **43.5% of purchasing customers spent above the average customer spend of $1,600.54**. These findings suggest that customer value extends across a broad portion of the customer base rather than being limited to a small group of standout accounts. However, a more detailed customer concentration analysis would be required to determine the proportion of total company revenue generated by the highest-value customers.
+
+Overall, the project demonstrates how SQL can be used to move from a large and unstructured dataset to a relational database and then translate that data into business-focused analysis. The results provide a foundation for further investigation into customer concentration, profitability drivers and delivery performance, while ensuring that business decisions are based on evidence rather than assumptions.
+
+--
+
+## Recommendations
+
+### 1. Review First Class Delivery Performance
+
+First Class recorded a **95.27% late-delivery rate** in the dataset. This is a strong descriptive finding, but the analysis does not establish whether shipping mode itself is responsible for the delays.
+
+Management should investigate delivery performance across shipping modes while considering factors such as destination, scheduled shipping days, order volume and order characteristics. This would help determine whether the high late-delivery rate is associated with the shipping mode itself or with other operational factors.
+
+### 2. Monitor Customer Value and Concentration
+
+The top 10 customers showed relatively similar revenue levels, with no single customer generating substantially more revenue than the others. In addition, **43.5% of purchasing customers spent above the average customer spend of $1,600.54**.
+
+Rather than focusing only on individual high-value customers, management should monitor customer value across the wider customer base. Comparing the revenue contribution of the top 1%, 5% and 10% of customers against total company revenue would also provide a clearer measure of customer concentration and potential revenue risk.
+
+### 3. Investigate the Drivers of Regional and Departmental Performance
+
+**Western Europe** generated the highest regional revenue, while **Fan Shop** was the strongest department by revenue. These results identify strong-performing areas, but the analysis does not establish why they are performing better than other regions or departments.
+
+Management should compare order volume, product mix, customer demand and purchasing patterns across regions and departments. This would help determine whether the observed differences are driven by sustained demand, product composition or a smaller number of high-value transactions.
+
+### 4. Establish Regular Revenue Performance Monitoring
+
+The analysis showed overall cumulative revenue growth alongside month-to-month fluctuations. Monitoring cumulative revenue alone could therefore hide periods of weaker performance.
+
+A regular monthly performance review should track revenue, month-on-month growth and significant changes against previous periods. Where a material decline occurs, management can investigate the underlying product, regional or customer-level drivers and respond accordingly.
+
+--
+
+## Tools Used
+
+* **Microsoft SQL Server** — Database creation, table design, relationships, data validation and SQL analysis.
+* **SQL Server Management Studio (SSMS)** — Writing, executing and testing SQL queries and managing the database.
+* **Microsoft Excel** — Initial inspection and preparation of the raw dataset before importing it into SQL Server.
+
+
+
