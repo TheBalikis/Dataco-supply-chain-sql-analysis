@@ -17,11 +17,9 @@ A SQL Server portfolio project that transforms a single flat operational dataset
 - [Recommendations](#recommendations)
 - [Tools Used](#tools-used)
 
-
---
+---
 
 ## Project Overview
-
 This project analyses the **DataCo Supply Chain dataset** using Microsoft SQL Server to examine sales performance, customer spending, profitability and shipping operations.
 
 The project started with a raw dataset containing **180,519 records and 53 columns**, covering transactions from **1 January 2015 to 31 January 2018**. Rather than analysing the raw data as one large table, I first examined its structure and separated the information into seven related tables: **Customers, Products, Categories, Departments, Orders, Order_Details and Shipping**.
@@ -35,7 +33,7 @@ The analysis also includes advanced SQL techniques such as **Common Table Expres
 The purpose of the project was not simply to demonstrate SQL syntax. The focus was on using SQL to turn a large supply chain dataset into structured information that can be interpreted in a business context and used to identify areas requiring further attention.
 
 
---
+---
 
 ## Business Problem
 
@@ -50,7 +48,7 @@ A further consideration was the reliability of the analysis. Customer names, for
 The overall business problem was to move from a large and difficult-to-analyse raw dataset to reliable, business-focused information that could help identify performance patterns, operational issues and areas requiring further investigation.
 
 
---
+---
 
 ## Objectives
 
@@ -73,7 +71,7 @@ The main objectives of the project were to:
 8. **Translate the SQL results into business insights and recommendations** that distinguish between what the data directly shows and areas that require further investigation.
 
 
---
+---
 
 ## Dataset
 
@@ -107,7 +105,7 @@ For the project, the raw dataset was reorganised into a relational database cont
 The dataset was used as the foundation for both the database design and the subsequent SQL analysis. The original raw structure was retained for reference, while the seven-table relational structure was used for the business analysis.
 
 
---
+---
 
 ## Database Design
 
@@ -134,7 +132,7 @@ The final database structure is represented in the ERD below, showing the tables
 ![DataCo Supply Chain Database ERD](Images/DataCo_ERD.png)
 
 
---
+---
 
 ## Data Preparation & Validation
 
@@ -161,7 +159,7 @@ These checks also helped identify and resolve issues encountered during the data
 The final validated database contained **seven related tables**, which were then used for the business and advanced SQL analysis.
 
 
---
+---
 
 ## SQL Analysis
 
@@ -211,7 +209,7 @@ The project applied a range of SQL techniques, including:
 The complete SQL scripts are included in the repository so that the analysis can be reviewed and reproduced.
 
 
---
+---
 
 ## Key Findings
 
@@ -241,7 +239,7 @@ The analysis identified several patterns across customer spending, revenue perfo
 Overall, the findings show that the dataset contains meaningful differences across customers, products, profitability and delivery performance, while also highlighting areas where further analysis would be required before making causal conclusions.
 
 
---
+---
 
 ## Business Insights
 
@@ -288,7 +286,7 @@ The analysis identifies strong revenue-generating areas alongside opportunities 
 The most important areas for further attention are **customer retention and value development, product profitability, revenue concentration and delivery performance**, particularly the unusually high late-delivery rate associated with First Class shipments.
 
 
---
+---
 
 ## Conclusion
 
@@ -303,7 +301,7 @@ The customer analysis also showed that revenue among the highest-spending custom
 Overall, the project demonstrates how SQL can be used to move from a large and unstructured dataset to a relational database and then translate that data into business-focused analysis. The results provide a foundation for further investigation into customer concentration, profitability drivers and delivery performance, while ensuring that business decisions are based on evidence rather than assumptions.
 
 
---
+---
 
 ## Recommendations
 
@@ -332,7 +330,7 @@ The analysis showed overall cumulative revenue growth alongside month-to-month f
 A regular monthly performance review should track revenue, month-on-month growth and significant changes against previous periods. Where a material decline occurs, management can investigate the underlying product, regional or customer-level drivers and respond accordingly.
 
 
---
+---
 
 ## Tools Used
 
