@@ -15,6 +15,8 @@ A SQL Server portfolio project that transforms a single flat operational dataset
 - [Business Insights](#business-insights)
 - [Conclusion](#conclusion)
 - [Recommendations](#recommendations)
+- [Limitations](#limitations)
+- [Future-Analysis](#future-analysis)
 - [Tools Used](#tools-used)
 
 ---
@@ -245,7 +247,7 @@ Overall, the findings show that the dataset contains meaningful differences acro
 
 The analysis identified several findings relevant to revenue performance, customer value, profitability and operational efficiency. Rather than simply reporting the results, the findings were considered in terms of what they could mean for business decision-making.
 
-### 1. Revenue Concentration
+### 1. Revenue Distribution Across Departments and Regions
 
 Revenue performance was not evenly distributed across departments, regions and customers. **Fan Shop** generated the highest departmental revenue, while **Western Europe** was the strongest region by revenue.
 
@@ -281,7 +283,7 @@ Overall growth should therefore not be interpreted as consistent month-to-month 
 
 ### Overall Business Insight
 
-The analysis identifies strong revenue-generating areas alongside opportunities to improve operational performance and better understand the factors influencing profitability and customer value.
+The overall business problem was to convert a large, unstructured dataset into reliable, business-focused information — capable of surfacing performance patterns, operational issues and areas needing further investigation.
 
 The most important areas for further attention are **customer retention and value development, product profitability, revenue concentration and delivery performance**, particularly the unusually high late-delivery rate associated with First Class shipments.
 
@@ -329,6 +331,31 @@ The analysis showed overall cumulative revenue growth alongside month-to-month f
 
 A regular monthly performance review should track revenue, month-on-month growth and significant changes against previous periods. Where a material decline occurs, management can investigate the underlying product, regional or customer-level drivers and respond accordingly.
 
+
+---
+
+---
+
+## Limitations
+
+1. **Non-unique customer names.** The dataset contains a large number of duplicate `CustomerName` values (1,721 customers are named "Mary Smith" alone). Any analysis grouping by name rather than `CustomerID` will produce materially incorrect results. This was identified and corrected during the analysis, but it highlights a broader data quality characteristic of the dataset that should be accounted for in any further work.
+
+2. **Descriptive, not causal, analysis.** The project uses descriptive SQL analysis (aggregation, ranking, window functions) rather than statistical or causal modelling. Findings such as the 95.27% First Class late-delivery rate describe a pattern in the data but do not establish that shipping mode itself causes delays — other factors (destination, order volume, scheduling) were not controlled for.
+
+3. **Limited scope of customer concentration analysis.** The customer revenue analysis was based on the top 10 customers and an above/below-average split. This gives a useful directional picture but doesn't fully quantify revenue concentration — a proper concentration measure (e.g., revenue share held by the top 1%, 5%, and 10% of customers) would give a more precise answer.
+
+4. **No time-based customer segmentation.** The analysis treats customer spending as a static, all-time total. It doesn't account for customer tenure, recency, or changes in spending behaviour over time.
+
+5. **No predictive or machine learning component**, as stated in the original project scope — the work is limited to descriptive and diagnostic SQL analysis.
+
+---
+
+## Future Analysis
+
+1. Quantify true revenue concentration by calculating the % of total revenue held by the top 1%, 5%, and 10% of customers.
+2. Investigate the drivers of the First Class late-delivery rate using a controlled comparison (e.g., delivery performance by shipping mode within the same region or order size).
+3. Build a customer segmentation model (RFM — recency, frequency, monetary value) to move beyond a static above/below-average split.
+4. Extend the monthly revenue trend analysis with year-over-year comparisons and seasonality decomposition.
 
 ---
 
